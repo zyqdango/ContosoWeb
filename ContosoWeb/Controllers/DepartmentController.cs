@@ -19,12 +19,16 @@ namespace ContosoWeb.Controllers
         // GET: Department
         public ActionResult Index()
         {
+            //loosely coupling
             //ContosoDbContext dbContext = new ContosoDbContext();
-
             //DepartmentRepository dr = new DepartmentRepository(dbContext);
             //DepartmentService studentService = new DepartmentService(dr);
-            var departments = _departmentService.GetDepartments();
             //var students = studentService.GetDepartments();
+
+            //Using ninject
+            //var departments = _departmentService.GetDepartments();
+
+            var departments = _departmentService.GetAllDepartmentIncludeCouses();
             return View(departments);
         }
 

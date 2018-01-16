@@ -16,7 +16,7 @@ namespace ContosoData
                 
         }
         public DbSet<People> People { get; set; }
-        public DbSet<Department> Departmnet{ get; set; }
+        public DbSet<Department> Department{ get; set; }
         public DbSet<Course> Course { get; set; }
         public DbSet<Student> Student { get; set; }
     }

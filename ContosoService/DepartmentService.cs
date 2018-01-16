@@ -22,6 +22,11 @@ namespace ContosoService
             _departmentRepository.Add(department);
         }
 
+        public IEnumerable<Department> GetAllDepartmentIncludeCouses()
+        {
+            return _departmentRepository.GetAllDepartmentIncludeCourses();
+        }
+
         public Department GetDepartmentById(int id)
         {
             return _departmentRepository.GetById(id);
@@ -41,6 +46,7 @@ namespace ContosoService
     public interface IDepartmentService
     {
         IEnumerable<Department> GetDepartments();
+        IEnumerable<Department> GetAllDepartmentIncludeCouses();
         Department GetDepartmentById(int id);
         void AddDepartment(Department department);
         void UpdateDepartment(Department department);

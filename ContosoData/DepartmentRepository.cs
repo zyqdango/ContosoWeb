@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity;
 
 namespace ContosoData
 {
@@ -12,11 +13,15 @@ namespace ContosoData
         public DepartmentRepository(ContosoDbContext context) : base(context)
         {
         }
-
+        public IEnumerable<Department> GetAllDepartmentIncludeCourses()
+        {
+            var departments = _context.Department.Include(d => d.Course).ToList();
+            return departments;
+        }
        
     }
     public interface IDepartmentRepository : IRepository<Department>
     {
-        
+        IEnumerable<Department> GetAllDepartmentIncludeCourses();
     }
 }

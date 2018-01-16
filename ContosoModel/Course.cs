@@ -12,7 +12,7 @@ namespace ContosoModel
     {
         [StringLength(50, MinimumLength = 3)]
         public string Title { get; set; }
-        public decimal credit { get; set; }
+        public decimal Credit { get; set; }
         public int DepartmentId { get; set; }
         public Department Department { get; set; }
     }
