@@ -20,6 +20,7 @@ namespace ContosoService
         public void AddDepartment(Department department)
         {
             _departmentRepository.Add(department);
+            _departmentRepository.SaveChanges();
         }
 
         public IEnumerable<Department> GetAllDepartmentIncludeCouses()
@@ -40,7 +41,7 @@ namespace ContosoService
         public void UpdateDepartment(Department department)
         {
             _departmentRepository.Update(department);
-
+            _departmentRepository.SaveChanges();
         }
     }
     public interface IDepartmentService

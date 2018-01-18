@@ -71,6 +71,14 @@
     <Compile Include="Migrations\201801151605483_CreateStudentTable.Designer.cs">
       <DependentUpon>201801151605483_CreateStudentTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201801180117132_addSomeTablesToDatabase.cs" />
+    <Compile Include="Migrations\201801180117132_addSomeTablesToDatabase.Designer.cs">
+      <DependentUpon>201801180117132_addSomeTablesToDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801180126163_modifyAndMoveFaultTable.cs" />
+    <Compile Include="Migrations\201801180126163_modifyAndMoveFaultTable.Designer.cs">
+      <DependentUpon>201801180126163_modifyAndMoveFaultTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PersonRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -104,6 +112,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201801151605483_CreateStudentTable.resx">
       <DependentUpon>201801151605483_CreateStudentTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801180117132_addSomeTablesToDatabase.resx">
+      <DependentUpon>201801180117132_addSomeTablesToDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801180126163_modifyAndMoveFaultTable.resx">
+      <DependentUpon>201801180126163_modifyAndMoveFaultTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

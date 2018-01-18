@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ContosoModel.Common;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -11,5 +12,7 @@ namespace ContosoModel
     public class Student:People
     {
         public DateTime EnrollmentDate { get; set; }
+
     }
+
 }

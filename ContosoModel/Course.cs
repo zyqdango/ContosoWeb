@@ -15,5 +15,7 @@ namespace ContosoModel
         public decimal Credit { get; set; }
         public int DepartmentId { get; set; }
         public Department Department { get; set; }
+        public ICollection<Enrollment> Enrollment { get; set; }
+        public virtual ICollection<CourseInstructor> CourseInstructors { get; set; }
     }
 }

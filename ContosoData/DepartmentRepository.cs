@@ -15,7 +15,7 @@ namespace ContosoData
         }
         public IEnumerable<Department> GetAllDepartmentIncludeCourses()
         {
-            var departments = _context.Department.Include(d => d.Course).ToList();
+            var departments = _context.Department.Include(d => d.Courses).ToList();
             return departments;
         }
        
